@@ -20,8 +20,8 @@ backend alx_servers
         mode http
         timeout connect 10s
         timeout server 100s
-        server 27717-web-01 18.205.192.27 check
-        server 27717-web-02 3.236.26.187 check
+        server 27717-web-01 18.205.192.27:80 check
+        server 27717-web-02 3.236.26.187:80 check
 " > /etc/haproxy/haproxy.cfg
 
 service haproxy start
