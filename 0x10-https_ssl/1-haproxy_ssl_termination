@@ -44,7 +44,7 @@ frontend www-http
 	default_backend www-backend
 
 frontend www-https
-	bind haproxy_www_public_IP:443 ssl crt /etc/haproxy/certs/www.powerpuffgirl.tech.pem
+	bind haproxy_www_public_IP:443 ssl crt /etc/haproxy/certs/www.lilywd.tech.pem
 	http-request add-header X-Forwarded-Proto http 
 	acl letsencrypt-acl path_beg /.well-known/acme-challenge/
 	use_backend letsencrypt-backend if letsencrypt-acl
